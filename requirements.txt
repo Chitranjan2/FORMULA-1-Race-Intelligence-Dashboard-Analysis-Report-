@@ -6,7 +6,7 @@ joblib>=1.3.0
 
 # Dashboards and figures
 streamlit>=1.32.0
-matplotlib>=3.8.0
+matplotlib>=3.10.9
 
 # Fast columnar storage for the processed dataset
 pyarrow>=14.0.0
