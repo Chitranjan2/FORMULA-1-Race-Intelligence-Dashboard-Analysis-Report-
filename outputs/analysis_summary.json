@@ -1,0 +1,33 @@
+{
+  "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "races": 88,
+  "driver_laps_total": 98095,
+  "clean_laps_used": 79224,
+  "fuel_effect_median_s_per_lap": -0.0548,
+  "deg_median_s_per_lap": 0.0517,
+  "pit_loss_median_s": 23.17,
+  "pit_stops_measured": 2052,
+  "fastest_team_per_season": {
+    "2023": {
+      "team": "Red Bull Racing",
+      "median_gap_s": 0.0
+    },
+    "2024": {
+      "team": "McLaren",
+      "median_gap_s": 0.057
+    },
+    "2025": {
+      "team": "McLaren",
+      "median_gap_s": 0.0
+    },
+    "2026": {
+      "team": "Mercedes",
+      "median_gap_s": 0.0
+    }
+  }
+}

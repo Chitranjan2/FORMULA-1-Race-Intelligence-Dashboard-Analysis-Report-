@@ -1,0 +1,124 @@
+{
+  "target": "podium_finish (finish position <= 3)",
+  "model": "SimpleImputer(median) + HistGradientBoostingClassifier(max_depth=3)",
+  "validation": "walk-forward by season (train only on earlier seasons)",
+  "holdout_seasons": [
+    2025,
+    2026
+  ],
+  "feature_columns": [
+    "grid",
+    "quali_gap_s",
+    "quali_position",
+    "rolling_pace_gap_s",
+    "rolling_podium_rate",
+    "rolling_avg_finish",
+    "round",
+    "is_street",
+    "race_laps"
+  ],
+  "pooled": {
+    "n": 875,
+    "accuracy": 0.9086,
+    "precision": 0.662,
+    "recall": 0.746,
+    "f1": 0.7015,
+    "roc_auc": 0.9441,
+    "brier": 0.0641,
+    "log_loss": 0.2087
+  },
+  "by_season": [
+    {
+      "n": 479,
+      "accuracy": 0.8998,
+      "precision": 0.6429,
+      "recall": 0.75,
+      "f1": 0.6923,
+      "roc_auc": 0.9294,
+      "brier": 0.0701,
+      "log_loss": 0.2383,
+      "season": 2025,
+      "train_rows": 919,
+      "train_seasons": [
+        2023,
+        2024
+      ],
+      "grid_baseline": {
+        "n": 479,
+        "accuracy": 0.9165,
+        "precision": 0.8333,
+        "recall": 0.5556,
+        "f1": 0.6667,
+        "roc_auc": 0.9304,
+        "brier": 0.0627,
+        "log_loss": 0.2304
+      }
+    },
+    {
+      "n": 396,
+      "accuracy": 0.9192,
+      "precision": 0.6897,
+      "recall": 0.7407,
+      "f1": 0.7143,
+      "roc_auc": 0.9606,
+      "brier": 0.0567,
+      "log_loss": 0.1728,
+      "season": 2026,
+      "train_rows": 1398,
+      "train_seasons": [
+        2023,
+        2024,
+        2025
+      ],
+      "grid_baseline": {
+        "n": 396,
+        "accuracy": 0.9091,
+        "precision": 0.75,
+        "recall": 0.5,
+        "f1": 0.6,
+        "roc_auc": 0.9386,
+        "brier": 0.0624,
+        "log_loss": 0.207
+      }
+    }
+  ],
+  "calibration": [
+    {
+      "mean_predicted": 0.0,
+      "observed": 0.0
+    },
+    {
+      "mean_predicted": 0.0001,
+      "observed": 0.0092
+    },
+    {
+      "mean_predicted": 0.0003,
+      "observed": 0.0
+    },
+    {
+      "mean_predicted": 0.0012,
+      "observed": 0.0091
+    },
+    {
+      "mean_predicted": 0.0051,
+      "observed": 0.0092
+    },
+    {
+      "mean_predicted": 0.046,
+      "observed": 0.0642
+    },
+    {
+      "mean_predicted": 0.3937,
+      "observed": 0.3303
+    },
+    {
+      "mean_predicted": 0.801,
+      "observed": 0.7273
+    }
+  ],
+  "notes": [
+    "Baseline is a grid-only logistic regression, included so the lift from engineered features is explicit.",
+    "Rolling features are shifted by one race, so no current-race information leaks into the features.",
+    "Probability quality (Brier / log loss / calibration) is reported because accuracy alone is misleading for rare events."
+  ]
+}

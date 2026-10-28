@@ -1,0 +1,32 @@
+{
+  "race": "2026 United States Grand Prix",
+  "measured": {
+    "pit_loss_s": 21.74,
+    "fuel_effect_s_per_lap": -0.0569,
+    "deg_s_per_lap": {
+      "SOFT": 0.0482,
+      "MEDIUM": 0.0563,
+      "HARD": 0.0517
+    },
+    "sc_probability": 0.716
+  },
+  "monte_carlo": {
+    "recommended_plan": "1-stop 30 (SOFT-HARD)",
+    "comparison": [
+      {
+        "plan": "1-stop 30 (SOFT-HARD)",
+        "mean_total_s": 5722.59,
+        "p10_total_s": 5720.15,
+        "p90_total_s": 5725.39,
+        "win_probability": 0.516
+      },
+      {
+        "plan": "1-stop 29 (SOFT-HARD)",
+        "mean_total_s": 5722.67,
+        "p10_total_s": 5719.96,
+        "p90_total_s": 5725.45,
+        "win_probability": 0.483
+      }
+    ]
+  }
+}

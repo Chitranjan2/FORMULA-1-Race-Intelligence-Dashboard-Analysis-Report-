@@ -1,0 +1,31 @@
+{
+  "package_version": "2.0.0",
+  "built_at_utc": "2026-10-28T14:53:27.401082+05:30",
+  "seasons": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "limit_per_season": null,
+  "row_counts": {
+    "sessions": 186,
+    "races": 93,
+    "race_laps": 98095,
+    "quali_best": 1767,
+    "results": 1794,
+    "qualifying": 1789,
+    "standings": 131,
+    "weather": 88
+  },
+  "duration_seconds": 357.0,
+  "sources": {
+    "laps_stints_pits_weather_racecontrol": "OpenF1 (https://api.openf1.org/v1)",
+    "results_qualifying_standings_schedule": "Jolpica (https://api.jolpi.ca/ergast/f1)"
+  },
+  "notes": [
+    "Lap times, sector times, tyre compounds and pit-stop durations are downloaded from OpenF1.",
+    "Nothing in this dataset is simulated or randomly generated.",
+    "Neutralised laps are derived from race-control messages and may be approximate."
+  ]
+}

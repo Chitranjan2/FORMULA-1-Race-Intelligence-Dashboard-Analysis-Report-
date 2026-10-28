@@ -1,15 +1,22 @@
+# Bytecode
 __pycache__/
-*.pyc
-*.pyo
-*.pyd
+*.py[cod]
+.venv/
+venv/
+
+# Tooling
 .pytest_cache/
 .ipynb_checkpoints/
 *.egg-info/
 dist/
 build/
-.env
-data/f1db/
 
-# Runtime cache
-data/cache/
-__pycache__/
+# Secrets
+.env
+
+# Downloaded API responses — reproducible from the public endpoints, never committed
+data/raw/cache/
+
+# OS noise
+.DS_Store
+Thumbs.db
